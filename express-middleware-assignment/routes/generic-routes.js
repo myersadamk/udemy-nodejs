@@ -1,15 +1,14 @@
 const express = require('express');
-const getHtmlFile = require('./html-file-path');
 
 const routes = express.Router();
 
 routes.get('/', (req, res) => {
-  res.sendFile(getHtmlFile('index.html'));
+  res.render('index.ejs');
 });
 
 routes.use((req, res) => {
   res.status(404);
-  res.sendFile(getHtmlFile('page-not-found.html'))
+  res.render('page-not-found.ejs');
 });
 
 module.exports = routes;

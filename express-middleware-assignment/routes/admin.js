@@ -1,10 +1,7 @@
-const express = require('express');
-const getHtmlFile = require('./html-file-path');
-
-const adminRoutes = express.Router();
+const adminRoutes = require('express').Router();
 
 adminRoutes.get('/add-users', (req, res) => {
-  res.sendFile(getHtmlFile('add-users.html'));
+  res.render('add-users.ejs');
 });
 
 adminRoutes.post('/add-users', (req, res) => {
