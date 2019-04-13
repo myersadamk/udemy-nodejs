@@ -7,7 +7,7 @@ const fromBase = (...files) => {
 module.exports.fromBase = fromBase;
 
 module.exports.fromView = (...files) => {
-  return fromBase('view', ...files);
+  return fromBase('views', ...files);
 };
 
 module.exports.fromModel = (...files) => {
