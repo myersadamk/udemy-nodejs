@@ -7,7 +7,7 @@ const genericRoutes = require('./src/js/routes/generic-routes');
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(adminRoutes);
+app.use('/admin', adminRoutes);
 app.use(genericRoutes);
 
 // app.use('/users', (req, res) => {
