@@ -1,14 +1,14 @@
-const adminRoutes = require('express').Router();
+const routes = require('express').Router();
+const usersController = require('../controller/users');
 
-adminRoutes.get('/add-users', (req, res) => {
-  res.render('add-users.ejs', {
-    target: '/admin/add-users'
-  });
+routes.get('/add-users', (req, res) => {
+  usersController.getUserRegistration(res);
 });
 
-adminRoutes.post('/add-users', (req, res) => {
-  console.log(req.body);
-  res.redirect('/');
+routes.post('/add-users', (req, res) => {
+  usersController.postNewUsers(req, res);
 });
 
-module.exports = adminRoutes;
+module.exports.registerRoutes = (app) => {
+  app.use('/admin', routes);
+};
