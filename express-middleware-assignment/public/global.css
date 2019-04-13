@@ -1,0 +1,14 @@
+* {
+    font-family: sans-serif;
+    color: darkgoldenrod;
+}
+
+body {
+    background-color: aliceblue;
+    margin: auto;
+    width: 50%;
+}
+
+body .content {
+    text-align: center;
+}
