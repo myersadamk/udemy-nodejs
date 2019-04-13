@@ -1,10 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const sassMiddleware = require('node-sass-middleware');
+const path = require('path');
 
-const adminRoutes = require('./src/js/routes/admin');
-const genericRoutes = require('./src/js/routes/generic-routes');
+const adminRoutes = require('./src/routes/admin');
+const genericRoutes = require('./src/routes/generic-routes');
 
 const app = express();
+
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
+app.use(express.static('./public'));
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/admin', adminRoutes);

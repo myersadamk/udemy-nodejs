@@ -1,0 +1,16 @@
+nav {
+  padding: 20px 0 20px 0;
+  background-color: cadetblue;
+}
+
+a {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: beige;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+a:hover {
+  color: gold;
+}

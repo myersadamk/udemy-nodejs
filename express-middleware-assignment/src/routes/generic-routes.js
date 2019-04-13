@@ -1,15 +1,15 @@
 const express = require('express');
 const getHtmlFile = require('./html-file-path');
 
-const baseRoutes = express.Router();
+const routes = express.Router();
 
-baseRoutes.get('/', (req, res) => {
+routes.get('/', (req, res) => {
   res.sendFile(getHtmlFile('index.html'));
 });
 
-baseRoutes.use((req, res) => {
+routes.use((req, res) => {
   res.status(404);
   res.sendFile(getHtmlFile('page-not-found.html'))
 });
 
-module.exports = baseRoutes;
+module.exports = routes;
