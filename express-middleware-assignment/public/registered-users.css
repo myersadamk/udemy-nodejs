@@ -1,0 +1,16 @@
+.users-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+article img {
+    box-shadow: 6px 6px darksalmon;
+}
+
+article header {
+    font-style: italic;
+    font-weight: bolder;
+}
+

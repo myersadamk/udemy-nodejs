@@ -17,3 +17,7 @@ module.exports.fromModel = (...files) => {
 module.exports.fromRoutes = (...files) => {
   return fromBase('routes', ...files);
 };
+
+module.exports.fromData = (...files) => {
+  return fromBase('data', ...files);
+};

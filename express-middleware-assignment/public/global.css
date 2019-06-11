@@ -4,9 +4,10 @@
 }
 
 body {
-    background-color: aliceblue;
     margin: auto;
     width: 50%;
+    min-width: 800px;
+    background-color: aliceblue;
 }
 
 body .content {

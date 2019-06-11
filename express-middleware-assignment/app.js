@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({extended: false}));
-require('./routes/admin').registerRoutes(app);
+require('./routes/users').registerRoutes(app);
 require('./routes/generic').registerRoutes(app);
 
 app.set('views-engine', 'ejs');
